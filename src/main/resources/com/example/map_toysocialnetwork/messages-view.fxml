@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.map_toysocialnetwork.controller.MessagesController">
+    <children>
+        <VBox spacing="10" alignment="TOP_LEFT" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+            <TableView fx:id="tableViewUsers" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="usernameColumn" text="Username" prefWidth="200" />
+                </columns>
+            </TableView>
+            <HBox spacing="10">
+                <TextField fx:id="recipientsTextField" promptText="Introduceți username-uri separate prin spațiu" HBox.hgrow="ALWAYS" />
+                <TextField fx:id="messageTextField" promptText="Introduceți mesajul" HBox.hgrow="ALWAYS" />
+                <Button fx:id="sendButton" text="Trimite" onAction="#handleSendMessageToMultipleUsers" />
+                <Button fx:id="openConversationButton" text="Open Conversation" onAction="#handleOpenConversation" />
+
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

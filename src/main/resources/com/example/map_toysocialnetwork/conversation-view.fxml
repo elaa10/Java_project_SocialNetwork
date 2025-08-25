@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.map_toysocialnetwork.controller.ConversationController" spacing="10" alignment="TOP_LEFT">
+    <TableView fx:id="tableViewMessages" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="fromColumn" text="De la" prefWidth="100" />
+            <TableColumn fx:id="messageColumn" text="Mesaj" prefWidth="300" />
+            <TableColumn fx:id="dateColumn" text="Data" prefWidth="150" />
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <TextField fx:id="messageTextField" promptText="Scrieți mesajul" HBox.hgrow="ALWAYS" />
+        <Button text="Trimite" onAction="#handleSendMessage" />
+    </HBox>
+</VBox>
